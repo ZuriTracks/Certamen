@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/albums.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="page-albums">
+  <div class="container py-4">
+    <h1 class="mb-4">Álbums</h1>
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+      <!-- Álbum 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://elefant.com/images/disco/00015419.jpg?d=520x520" class="card-img-top img-fluid" alt="Axolotes Mexicanos - Infectados (2013)">
+          <div class="card-body"><h6 class="card-title mb-0">Infectados (2013)</h6></div>
+        </div>
+      </div>
+      <!-- Álbum 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://f4.bcbits.com/img/a2170218462_16.jpg" class="card-img-top img-fluid" alt="Axolotes Mexicanos - Holi &lt;3 (2015)">
+          <div class="card-body"><h6 class="card-title mb-0">Holi &lt;3 (2015)</h6></div>
+        </div>
+      </div>
+      <!-- Álbum 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://f4.bcbits.com/img/a0775614600_16.jpg" class="card-img-top img-fluid" alt="Axolotes Mexicanos - Salu2 (2018)">
+          <div class="card-body"><h6 class="card-title mb-0">Salu2 (2018)</h6></div>
+        </div>
+      </div>
+      <!-- Álbum 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://f4.bcbits.com/img/a3714477548_10.jpg" class="card-img-top img-fluid" alt="Axolotes Mexicanos - :3 (2021)">
+          <div class="card-body"><h6 class="card-title mb-0">:3 (2021)</h6></div>
+        </div>
+      </div>
+      <!-- Álbum 5 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://f4.bcbits.com/img/a3514327564_16.jpg" class="card-img-top img-fluid" alt="Axolotes Mexicanos - 4ever (2025)">
+          <div class="card-body"><h6 class="card-title mb-0">4ever (2025)</h6></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

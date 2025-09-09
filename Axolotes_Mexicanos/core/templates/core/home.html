@@ -1,88 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axolotes Mexicanos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      /* Altura uniforme tipo banner (ajusta si deseas) */
-      .carousel-inner {
-        height: 400px; /* Cambia este valor si el banner real es más alto/bajo */
-      }
-      .carousel-item {
-        height: 100%;
-      }
-      .carousel-item img.carousel-banner {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;      /* Recorta manteniendo proporción */
-        object-position: center; /* Centrado por defecto */
-        display: block;
-      }
-      /* Segunda imagen: ajustar con porcentaje (30%) */
-      .carousel-item img.top-focus {
-        object-position: center 30%;
-      }
-      /* Tercera imagen: ahora también con porcentaje (5% por defecto) */
-      .carousel-item img.top-focus-3 {
-        object-position: center 30%;
-      }
-    </style>
-</head>
-<body>
-    <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Axolotes Mexicanos</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Galería</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Historia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Albums</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+{% extends 'core/base.html' %}
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://yt3.googleusercontent.com/7QhrxUPTJltsIhT2Kx24xP7x8MWkjPDTLdSRvHrH7i1UhzSh_RBkbjacK2scHbISEl6TzU57=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" class="carousel-banner" alt="Banner 1">
-        </div>
-        <div class="carousel-item">
-          <img src="https://viberate-upload.ams3.cdn.digitaloceanspaces.com/prod/entity/artist/axolotes-mexicanos-GcMx4" class="carousel-banner top-focus" alt="Banner 2">
-        </div>
-        <div class="carousel-item">
-          <img src="https://static.wixstatic.com/media/dd126a_c57b9435ae544f37a20361684d431769~mv2.jpg/v1/fill/w_1000,h_698,al_c,q_85,usm_0.66_1.00_0.01/dd126a_c57b9435ae544f37a20361684d431769~mv2.jpg" class="carousel-banner top-focus-3" alt="Banner 3">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+{% block content %}
+<section class="container mt-5">
+  <h2>¡Bienvenidos al universo de Axolotes Mexicanos!</h2>
+  <p>
+    Axolotes Mexicanos es una banda nacida en Asturias, España, que fusiona el punk-pop, la electrónica, el J-Pop y la irreverencia adolescente con un estilo vibrante y único.
+    Desde sus inicios en 2012, han sabido abrirse paso en la escena indie española con letras descaradas, estética colorida y un sonido que no pide permiso.
+  </p>
 
-    <!-- Bootstrap JS CDN (opcional para navbar funcionalidad) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <p>
+    Conformada por <strong>Olaya Pedrayes</strong> en la voz, <strong>Stephen Lyne</strong> en el bajo, <strong>Juan Pedrayes</strong> en la batería, <strong>Mario del Valle</strong> y <strong>Lucas de la Iglesia</strong> en guitarras, la banda ha evolucionado sin perder su esencia explosiva y divertida.
+  </p>
+
+  <p>
+    Descubre más sobre su <a href="{% url 'historia' %}">historia</a>, escucha sus <a href="{% url 'albums' %}">álbums</a> o <a href="{% url 'contactos' %}">contáctalos</a> para contrataciones y prensa.
+  </p>
+</section>
+{% endblock %}

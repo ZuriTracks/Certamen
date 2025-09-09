@@ -20,5 +20,8 @@ from core import views
 
 urlpatterns = [
     path('',views.home,name='home'),
+    path('historia/',views.historia,name='historia'),
+    path('contacto/', views.contactos, name='contactos'),
+    path('albums/', views.albums, name='albums'),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Axolotes Mexicanos{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">Axolotes Mexicanos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'historia' %}">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'albums' %}">Álbums</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contactos' %}">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main role="main">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://yt3.googleusercontent.com/7QhrxUPTJltsIhT2Kx24xP7x8MWkjPDTLdSRvHrH7i1UhzSh_RBkbjacK2scHbISEl6TzU57=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" class="carousel-banner" alt="Banner 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://viberate-upload.ams3.cdn.digitaloceanspaces.com/prod/entity/artist/axolotes-mexicanos-GcMx4" class="carousel-banner top-focus" alt="Banner 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://static.wixstatic.com/media/dd126a_c57b9435ae544f37a20361684d431769~mv2.jpg/v1/fill/w_1000,h_698,al_c,q_85,usm_0.66_1.00_0.01/dd126a_c57b9435ae544f37a20361684d431769~mv2.jpg" class="carousel-banner top-focus-3" alt="Banner 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-dark text-light mt-5">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-3 mb-md-0">
+          <span class="fw-semibold">Axolotes Mexicanos</span> · © <span id="year"></span>
+        </div>
+        <div class="d-flex gap-3">
+          <a class="text-light text-decoration-none" href="https://instagram.com/axolotes_mexicanos" target="_blank" rel="noopener" aria-label="Instagram de Axolotes Mexicanos">
+            <i class="bi bi-instagram me-1"></i> @axolotes_mexicanos
+          </a>
+          <a class="text-light text-decoration-none" href="https://x.com/axolotesbanda" target="_blank" rel="noopener" aria-label="X (Twitter) de Axolotes Mexicanos">
+            <i class="bi bi-twitter-x me-1"></i> @axolotesbanda
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'core/js/main.js' %}"></script>
+</body>
+</html>
